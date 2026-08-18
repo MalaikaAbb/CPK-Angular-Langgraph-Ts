@@ -1,0 +1,127 @@
+{
+  "schema": 1,
+  "docsRoot": "https://docs.copilotkit.ai/angular/langgraph-typescript",
+  "syncedAt": "2026-08-18T06:52:58.614Z",
+  "pages": {
+    "/angular/langgraph-typescript": {
+      "file": "angular__langgraph-typescript.md",
+      "sha256": "73ff797a776436261a034faccec25a4183fdd4848471bedb2ec388b7e6bebb80",
+      "bytes": 8934,
+      "lines": 242,
+      "routes": [
+        "/",
+        "/doc-sync"
+      ],
+      "status": "ok",
+      "age": 0,
+      "date": "Tue, 18 Aug 2026 06:52:59 GMT"
+    },
+    "/angular/langgraph-typescript/guides/a2ui": {
+      "file": "angular__langgraph-typescript__guides__a2ui.md",
+      "sha256": "5419fc58bff900d261d46455854a2d23f0e7e558523f91a579442d5a59b390ff",
+      "bytes": 5889,
+      "lines": 195,
+      "routes": [
+        "/a2ui"
+      ],
+      "status": "ok",
+      "age": 0,
+      "date": "Tue, 18 Aug 2026 06:52:59 GMT"
+    },
+    "/angular/langgraph-typescript/guides/chat-ui": {
+      "file": "angular__langgraph-typescript__guides__chat-ui.md",
+      "sha256": "a847d6f1edd3693ba3eb2d9eb920b91d50cb172e9df6f63d25e556644d6a9338",
+      "bytes": 5157,
+      "lines": 178,
+      "routes": [
+        "/chat-ui"
+      ],
+      "status": "ok",
+      "age": 0,
+      "date": "Tue, 18 Aug 2026 06:52:59 GMT"
+    },
+    "/angular/langgraph-typescript/guides/frontend-tools-generative-ui": {
+      "file": "angular__langgraph-typescript__guides__frontend-tools-generative-ui.md",
+      "sha256": "4bf2c08d803e73a010b3a9238fb51af39c2dbc8737ae053348c324f35f37aedd",
+      "bytes": 5742,
+      "lines": 178,
+      "routes": [
+        "/frontend-tools-generative-ui"
+      ],
+      "status": "ok",
+      "age": 0,
+      "date": "Tue, 18 Aug 2026 06:52:59 GMT"
+    },
+    "/angular/langgraph-typescript/guides/human-in-the-loop": {
+      "file": "angular__langgraph-typescript__guides__human-in-the-loop.md",
+      "sha256": "fc4304344f2b14079a2f5fa6a2de66300f708bcb820b1a601294407d37aeafd0",
+      "bytes": 7186,
+      "lines": 227,
+      "routes": [
+        "/human-in-the-loop"
+      ],
+      "status": "ok",
+      "age": 0,
+      "date": "Tue, 18 Aug 2026 06:52:59 GMT"
+    },
+    "/angular/langgraph-typescript/guides/shared-state": {
+      "file": "angular__langgraph-typescript__guides__shared-state.md",
+      "sha256": "02c68e826f823e71a3b10e914679cb526e873e85b0058729d6da57a4e676fb6f",
+      "bytes": 4736,
+      "lines": 151,
+      "routes": [
+        "/shared-state"
+      ],
+      "status": "ok",
+      "age": 0,
+      "date": "Tue, 18 Aug 2026 06:52:59 GMT"
+    },
+    "/angular/langgraph-typescript/guides/threads-memory-attachments-headless": {
+      "file": "angular__langgraph-typescript__guides__threads-memory-attachments-headless.md",
+      "sha256": "9df71b7ad0cec591261bbff342cc45abb6ec111787b48d3bb40ca832c28387f9",
+      "bytes": 8960,
+      "lines": 302,
+      "routes": [
+        "/threads",
+        "/memory",
+        "/attachments",
+        "/headless"
+      ],
+      "status": "ok",
+      "age": 0,
+      "date": "Tue, 18 Aug 2026 06:52:59 GMT"
+    },
+    "/angular/langgraph-typescript/guides/voice-multimodal": {
+      "file": "angular__langgraph-typescript__guides__voice-multimodal.md",
+      "sha256": "5b24361c0f6d6d1576d0aa65b66e020a24750c8206a65ac08c2d29bf0f6e0eb4",
+      "bytes": 3824,
+      "lines": 111,
+      "routes": [
+        "/voice-multimodal"
+      ],
+      "status": "ok",
+      "age": 0,
+      "date": "Tue, 18 Aug 2026 06:52:59 GMT"
+    },
+    "/angular/langgraph-typescript/quickstart": {
+      "file": "angular__langgraph-typescript__quickstart.md",
+      "sha256": "73ff797a776436261a034faccec25a4183fdd4848471bedb2ec388b7e6bebb80",
+      "bytes": 8934,
+      "lines": 242,
+      "routes": [
+        "/quickstart"
+      ],
+      "status": "ok",
+      "age": 0,
+      "date": "Tue, 18 Aug 2026 06:52:59 GMT"
+    }
+  },
+  "sitemap": {
+    "fetchedAt": "2026-08-18T06:52:58.614Z",
+    "urlsUnderRoot": 3,
+    "knownUnmapped": [
+      "https://docs.copilotkit.ai/angular/langgraph-typescript/configurable",
+      "https://docs.copilotkit.ai/angular/langgraph-typescript/subgraphs"
+    ]
+  }
+}
