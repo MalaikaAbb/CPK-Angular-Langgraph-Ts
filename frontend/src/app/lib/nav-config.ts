@@ -201,6 +201,56 @@ export const NAV: NavGroup[] = [
     ],
   },
   {
+    title: 'LangGraph',
+    routes: [
+      {
+        path: '/configurable',
+        title: 'Configurable',
+        docPath: '/angular/langgraph-typescript/configurable',
+        summary:
+          'Which channel carries which runtime value: agent context for UI preferences, headers for auth, and backend-owned graph config.',
+        status: 'reference',
+        statusNote:
+          'The guide’s backend snippets depend on an auth flow it does not show, and this harness has none; its samples are shown as published.',
+      },
+      {
+        path: '/subgraphs',
+        hasDemo: true,
+        title: 'Subgraphs',
+        docPath: '/angular/langgraph-typescript/subgraphs',
+        summary:
+          'A travel supervisor routing to flights, hotels, and experiences subgraphs, with their state streamed into injectAgentStore.',
+        status: 'partial',
+        statusNote:
+          'Subgraph streaming is live, but the demo graph’s interrupt() picks have no Angular picker, so a run stops at the first interrupt.',
+      },
+      {
+        path: '/guardrails',
+        title: 'Guardrails & DLP',
+        docPath: '/angular/langgraph-typescript/guardrails',
+        summary:
+          'PIIMiddleware and custom input, output, and tool firewalls ordered ahead of CopilotKitMiddleware.',
+        status: 'reference',
+        statusNote:
+          'The TypeScript guide ships Python code only and has no TypeScript demo code, so there is nothing to run on the LangGraph.js backend.',
+      },
+    ],
+  },
+  {
+    title: 'Multi-agent',
+    routes: [
+      {
+        path: '/subagents',
+        hasDemo: true,
+        title: 'Sub-agents',
+        docPath: '/angular/langgraph-typescript/multi-agent/subagents',
+        summary:
+          'A supervisor delegating to research, writing, and critique sub-agents, with a live delegation log driven by shared state.',
+        status: 'working',
+      },
+    ],
+  },
+  {
     title: 'Doc Sync',
     routes: [
       {

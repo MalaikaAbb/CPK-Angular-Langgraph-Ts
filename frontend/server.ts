@@ -18,11 +18,19 @@
  * exists so the doc snippets that use `agentId="support"` (Chat UI, Threads)
  * run verbatim.
  *
+ * `subagents` and `sample_agent` are the graphs from the Sub-Agents and
+ * Subgraphs guides, published in backend/langgraph.json as `subagents` and
+ * `subgraphs`. `subagents` is the id the Angular Showcase uses for the
+ * sub-agents demo; `sample_agent` is the id the Subgraphs guide's
+ * `injectAgentStore("sample_agent")` snippet reads, so here it is bound to the
+ * `subgraphs` graph, not to the graph that backend/langgraph.json calls
+ * `sample_agent`.
+ *
  * `a2ui: {}` enables A2UIMiddleware for every registered agent, per
  * https://docs.copilotkit.ai/angular/langgraph-typescript/guides/a2ui
  */
 import { createServer } from "node:http";
-import { CopilotRuntime } from "@copilotkit/runtime/v2";
+import { CopilotKitIntelligence, CopilotRuntime } from "@copilotkit/runtime/v2";
 import { createCopilotNodeListener } from "@copilotkit/runtime/v2/node";
 import { LangGraphAgent } from "@ag-ui/langgraph";
 
@@ -34,12 +42,32 @@ const deploymentUrl =
 // Graph id from backend/langgraph.json — `"sample_agent": "./main.ts:graph"`.
 const graphId = process.env["LANGGRAPH_GRAPH_ID"] ?? "sample_agent";
 
+// Create the Intelligence client with your project API key. Keep this key on the server.
+const intelligence = new CopilotKitIntelligence({
+  apiKey: process.env["CPK_INTELLIGENCE_API_KEY"]!,
+});
+
+async function authenticateApplicationUser(
+  _request: Request,
+): Promise<{ id: string; name: string } | null> {
+  return { id: "local-user", name: "Local user" };
+}
+
 const runtime = new CopilotRuntime({
   agents: {
     default: new LangGraphAgent({ deploymentUrl, graphId }),
     support: new LangGraphAgent({ deploymentUrl, graphId }),
+    subagents: new LangGraphAgent({ deploymentUrl, graphId: "subagents" }),
+    sample_agent: new LangGraphAgent({ deploymentUrl, graphId: "subgraphs" }),
   },
   a2ui: {},
+  intelligence,
+  // Identify the user from a verified session or token
+  identifyUser: async (request) => {
+    const user = await authenticateApplicationUser(request);
+    if (!user) throw new Error("Unauthorized");
+    return { id: user.id, name: user.name };
+  },
 });
 
 const port = Number(process.env["PORT"] ?? 8200);
