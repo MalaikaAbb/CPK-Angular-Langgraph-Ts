@@ -14,6 +14,7 @@ import hljs from 'highlight.js/lib/core';
 import bash from 'highlight.js/lib/languages/bash';
 import css from 'highlight.js/lib/languages/css';
 import json from 'highlight.js/lib/languages/json';
+import python from 'highlight.js/lib/languages/python';
 import typescript from 'highlight.js/lib/languages/typescript';
 import xml from 'highlight.js/lib/languages/xml';
 
@@ -21,6 +22,7 @@ hljs.registerLanguage('typescript', typescript);
 hljs.registerLanguage('xml', xml);
 hljs.registerLanguage('css', css);
 hljs.registerLanguage('bash', bash);
+hljs.registerLanguage('python', python);
 hljs.registerLanguage('json', json);
 
 export type CodeLanguage =
@@ -28,12 +30,14 @@ export type CodeLanguage =
   | 'xml'
   | 'css'
   | 'bash'
+  | 'python'
   | 'json';
 
 /** Angular templates live inside `.ts` files, so TypeScript is the safe default. */
 export function languageForPath(path: string): CodeLanguage {
   if (path.endsWith('.html')) return 'xml';
   if (path.endsWith('.css')) return 'css';
+  if (path.endsWith('.py')) return 'python';
   if (path.endsWith('.json')) return 'json';
   if (path.endsWith('.sh')) return 'bash';
   return 'typescript';

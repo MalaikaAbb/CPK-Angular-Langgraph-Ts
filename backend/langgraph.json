@@ -3,7 +3,9 @@
     "dependencies": ["."],
     "package_manager": "npm",
     "graphs": {
-        "sample_agent": "./main.ts:graph"
+        "sample_agent": "./main.ts:graph",
+        "subagents": "./agents/subagents.ts:graph",
+        "subgraphs": "./agents/subgraphs.ts:subGraphsAgentGraph"
     },
     "env": ".env"
 }
